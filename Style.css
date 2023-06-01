@@ -1,0 +1,49 @@
+/*TODO add a custom scroll wheel*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: whitesmoke;
+}
+
+body {
+    background-color: black;
+}
+
+p,
+span,
+h1,
+h2,
+button {
+    font-size: 18px;
+    font-family: VT323, sans-serif;
+    color: whitesmoke;
+    width: 100%;
+}
+
+a {
+    color: slateblue;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30%;
+    margin-block: 10%;
+    width: 40%;
+}
+
+button {
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
