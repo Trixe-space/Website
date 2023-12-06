@@ -3,9 +3,7 @@ const Buttons = document.querySelectorAll('.menu button');
 let CurrentButton = 0;
 const Command = document.querySelector('.command');
 
-//TODO add keyboard inputs
-
-for (let i = 0; i < 2; i++) {
+for (let i = 0; i < 3; i++) {
     Buttons[i].addEventListener('focus', () => {
         Buttons[i].innerText = '> ' + Buttons[i].innerText;
         CurrentButton = i;
@@ -33,6 +31,16 @@ for (let i = 0; i < 2; i++) {
                     <br>
                     Github - <a href="https://github.com/Trixe-space">https://github.com/Trixe-space</a>`;
             });
+        } else if (i == 2) {
+            Command.innerHTML = Command.innerHTML +
+                `cd Contacts
+                <br>`;
+            setTimeout(() => {
+                Command.innerHTML = Command.innerHTML +
+                    `Email - trixe-space@trixe-space.tk
+                    <br>
+                    Discord - @trixe_space`;
+            });
         }
         setTimeout(() => {
             Command.innerHTML = Command.innerHTML +
@@ -49,8 +57,19 @@ let AutoFocus = () => {
 AutoFocus();
 
 document.onkeydown = e => {
-    if (e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40) {
-        CurrentButton = CurrentButton == 0 ? 1 : 0;
+    if (e.key == 'ArrowUp' || e.key == 'ArrowRight') {
+        if (CurrentButton != 2) {
+            CurrentButton += 1;
+        } else {
+            CurrentButton = 0;
+        }
+    } else if (e.key == 'ArrowDown' || e.key == 'ArrowLeft') {
+        if (CurrentButton != 0) {
+            CurrentButton -= 1;
+        } else {
+            CurrentButton = 2;
+        }
     }
+    console.log(CurrentButton);
     AutoFocus();
 };
