@@ -19,7 +19,7 @@ for (let i = 0; i < 3; i++) {
                 <br>`;
             setTimeout(() => {
                 Command.innerHTML = Command.innerHTML +
-                    `I am Trixe space. I exist. Me is dumb. I live in Bangladesh. I like to watch Youtube all day. I sometimes code I guess. I am not too good at it. I also have been trying to learn illustration. Uhhhhhhhh what else do I say?`;
+                    `I am Trixe space. I exist. Me is dumb. I live in Bangladesh. My timezone is GMT+6/UTC+6. I like to watch Youtube all day. I am a game developer and pixel artist. But I am not too good at pixel art. I also have been trying to learn music. I use Godot for game development and Pixelorama for pixel art. Feel free to contact me whenever you want. Uhhhhhhhh what else do I say?`;
             }, 80);
         } else if (i == 1) {
             Command.innerHTML = Command.innerHTML +
@@ -29,7 +29,11 @@ for (let i = 0; i < 3; i++) {
                 Command.innerHTML = Command.innerHTML +
                     `Youtube - <a href="https://www.youtube.com/@Trixe-space">https://www.youtube.com/@Trixe-space</a>
                     <br>
-                    Github - <a href="https://github.com/Trixe-space">https://github.com/Trixe-space</a>`;
+                    Github - <a href="https://github.com/Trixe-space">https://github.com/Trixe-space</a>
+                    <br>
+                    Itch.io - <a href="https://trixe-space.itch.io">https://trixe-space.itch.io</a>
+                    <br>
+                    Pixilart - <a href="https://www.pixilart.com/trixe-space">https://www.pixilart.com/trixe-space</a>`;
             });
         } else if (i == 2) {
             Command.innerHTML = Command.innerHTML +
@@ -39,7 +43,7 @@ for (let i = 0; i < 3; i++) {
                 Command.innerHTML = Command.innerHTML +
                     `Email - trixe-space@trixe-space.tk
                     <br>
-                    Discord - @trixe_space`;
+                    Discord - trixe_space`;
             });
         }
         setTimeout(() => {
@@ -70,6 +74,5 @@ document.onkeydown = e => {
             CurrentButton = 2;
         }
     }
-    console.log(CurrentButton);
     AutoFocus();
 };
