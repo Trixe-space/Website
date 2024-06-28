@@ -1,27 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Trixe space</title>
-    <link rel="shortcut icon" href="/Pfp.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/Style.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trixe space</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/Images/Pfp.svg" type="image/x-icon">
 </head>
 
 <body>
-    <p>Internet [Version 0.0.0000]</p>
-    <p>Copyright (c) 2024 Trixe space. All rights not reserved.</p>
-    <br>
+    <header>
+        <div class="header-text">
+            <span>Hi There!</span>
+            <span>I'm</span>
+            <span>Trixe space</span>
+        </div>
+        <img src="/Images/Pfp.svg" alt="My Profile Picture">
+    </header>
+    <main>
+        <div class="horizontal-center">
+            <section class="general-info">
+                <p>I live in Bangladesh.</p>
+                <p>My timezone is GMT+6 / UTC+6.</p>
+            </section>
+        </div>
+        <section class="topic game-dev">
+            <h1>I'm a Game Developer</h1>
+            <p>
+                I use <a href="https://godotengine.org">Godot</a> for game development. I've been doing game dev since 2021. I upload all the games I finish making on <a href="https://trixe-space.itch.io">itch.io</a>.
+            </p>
+            <section class="horizontal-center">
+                <iframe frameborder="0" src="https://itch.io/embed/2545444?border_width=0&amp;bg_color=2C3034&amp;fg_color=ffffff&amp;border_color=2C3034" width="550" height="165" id="itch-embed"><a href="https://trixe-space.itch.io/thaw-rush">Thaw Rush by Trixe space</a></iframe>
+            </section>
+        </section>
 
-    <p class="command">C:\Users\Trixe space></p>
+        <section class="topic pixel-art">
+            <h1>And a Pixel Artist</h1>
+            <p>
+                I use <a href="https://orama-interactive.itch.io/pixelorama">Pixelorama</a> for pixel art. I've been doing pixel art since 2022. You can find more pixel art from me on my <a href="https://www.pixilart.com/trixe-space">Pixilart account</a>.
+            </p>
+            <div class="horizontal-center">
+                <section class="pixel-art-showcase">
+                    <img src="/Pixel Art/Space.png" alt="">
+                    <img src="/Pixel Art/Bow & Arrow.gif" alt="">
+                    <img src="/Pixel Art/Blackhole.png" alt="">
+                    <img src="/Pixel Art/City at Night.png" alt="">
+                    <img src="/Pixel Art/Fountain Pen.png" alt="">
+                </section>
+            </div>
+        </section>
 
-    <div class="menu">
-        <button>cd About me</button>
-        <button>cd Socials</button>
-        <button>cd Contacts</button>
-    </div>
+        <section class="topic social">
+            <h1>Socials</h1>
+            <div class="horizontal-center">
+                <section class="socials-showcase">
+                    <button onclick="window.location.href='https:\//www.youtube.com/@Trixe-space'">
+                        <img src="/Icons/Youtube.png" alt="">
+                        <span>Youtube</span>
+                    </button>
+                    <button onclick="window.location.href='https:\//github.com/Trixe-space'">
+                        <img src="/Icons/Github.svg" alt="">
+                        <span>Github</span>
+                    </button>
+                    <button onclick="window.location.href='https:\//trixe-space.itch.io'">
+                        <img src="/Icons/itchio.svg" alt="">
+                        <span>Itch.io</span>
+                    </button>
+                    <button onclick="window.location.href='https:\//www.pixilart.com/trixe-space'">
+                        <img src="/Icons/Pixilart.png" alt="">
+                        <span>Pixilart</span>
+                    </button>
+                </section>
+            </div>
+        </section>
+        <footer class="topic horizontal-center" style="background-color: hsl(210, 8%, 15%);">
+            <span>
+                Email: <a href="mailto:trixe-space@trixe-space.tk">trixe-space@trixe-space.tk</a>
+            </span>
+        </footer>
+    </main>
 
-    <script src="/Script.js"></script>
+
+    <script src="/dist/code.js"></script>
 </body>
 
 </html>
