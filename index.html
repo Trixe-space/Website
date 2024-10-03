@@ -1,88 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trixe space</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="shortcut icon" href="/Images/Pfp.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="header-text">
-            <span>Hi There!</span>
-            <span>I'm</span>
-            <span>Trixe space</span>
+    <section id="heading">
+        <span class="heading-text">Hi there,</span>
+        <span class="heading-text">I'm <i id="name">Trixe space</i></span>
+    </section>
+    <section id="about-me">
+        <div class="line"></div>
+        <div id="about-me-list">
+            <span>I'm from Bangladesh.</span>
+            <span>My time zone is GMT+6/UTC+6.</span>
+            <span>I speak both English and Bangla.</span>
+            <span>A nerd.</span>
+            <span>Pixel art lover.</span>
         </div>
-        <img src="/Images/Pfp.svg" alt="My Profile Picture">
-    </header>
-    <main>
-        <div class="horizontal-center">
-            <section class="general-info">
-                <p>I live in Bangladesh.</p>
-                <p>My timezone is GMT+6 / UTC+6.</p>
-            </section>
+    </section>
+    <section id="pixel-art" class="hobbies">
+        <header>
+            <div class="line"></div>
+            <span class="heading-text">I'm a <span id="pixel-artist">Pixel Artist</span></span>
+        </header>
+        <p>
+            I've been doing Pixel Art since 2022. I learned it for the purpose of game dev but I ended up enjoying doing it. I use Pixelorama for pixel art. You can find art works by me over on Pixilart.
+        </p>
+        <button class="gradient-button gradient-button-pixilart" onclick="window.open('https://www.pixilart.com/trixe-space')">
+            <div class="button-content-container">
+                <img src="images/pixilart.png" alt="Pixilart link">
+                <span>Pixilart</span>
+            </div>
+        </button>
+    </section>
+    <section id="programming" class="hobbies">
+        <header>
+            <div class="line"></div>
+            <span class="heading-text">I'm also a <span id="developer">Developer</span></span>
+        </header>
+        <p>
+            I've been doing programming since 2023. So, I wouldn't say I have the most experience. I have also done game development in the past. I mainly use JavaScript and sometimes use TypeScript. As you can guess, I mostly do web development. However, I do plan on doing software development in the future. You can find the code written by me on GitHub
+        </p>
+        <button class="gradient-button gradient-button-github" onclick="window.open('https://github.com/Trixe-space')">
+            <div class="button-content-container">
+                <img src="images/github.svg" alt="GitHub link">
+                <span>GitHub</span>
+            </div>
+        </button>
+    </section>
+    <section id="projects">
+        <header>
+            <div class="line"></div>
+            <span class="heading-text">Projects</span>
+        </header>
+        <div id="project-list">
+            <div class="project-card">
+                <h2>UnitLine</h2>
+                <p>
+                    UnitLine is an easy to use CLI based conversion tool. It makes it extremely easy to convert to and from various units.
+                </p>
+                <div class="project-link-container">
+                    <button class="project-link" onclick="window.open('https://github.com/Trixe-space/UnitLine')">
+                        <img src="images/github.svg" alt="GitHub link">
+                    </button>
+                </div>
+            </div>
+            <div class="project-card">
+                <h2>Wave Generator</h2>
+                <p>
+                    A simple site for generating sine waves based on various parameters.
+                </p>
+                <div class="project-link-container">
+                    <button class="project-link" onclick="window.open('https://github.com/Trixe-space/Wave-Generator')">
+                        <img src="images/github.svg" alt="GitHub link">
+                    </button>
+                    <button class="project-link" onclick="window.open('https://wave-generator.trixe-space.tk')">
+                        <img src="images/web-icon.svg" alt="Website link">
+                    </button>
+                </div>
+            </div>
         </div>
-        <section class="topic game-dev">
-            <h1>I'm a Game Developer</h1>
-            <p>
-                I use <a href="https://godotengine.org">Godot</a> for game development. I've been doing game dev since 2021. I upload all the games I finish making on <a href="https://trixe-space.itch.io">itch.io</a>.
-            </p>
-            <section class="horizontal-center">
-                <iframe frameborder="0" src="https://itch.io/embed/2545444?border_width=0&amp;bg_color=2C3034&amp;fg_color=ffffff&amp;border_color=2C3034" width="550" height="165" id="itch-embed"><a href="https://trixe-space.itch.io/thaw-rush">Thaw Rush by Trixe space</a></iframe>
-            </section>
-        </section>
-
-        <section class="topic pixel-art">
-            <h1>And a Pixel Artist</h1>
-            <p>
-                I use <a href="https://orama-interactive.itch.io/pixelorama">Pixelorama</a> for pixel art. I've been doing pixel art since 2022. You can find more pixel art from me on my <a href="https://www.pixilart.com/trixe-space">Pixilart account</a>.
-            </p>
-            <div class="horizontal-center">
-                <section class="pixel-art-showcase">
-                    <img src="/Pixel Art/Space.png" alt="">
-                    <img src="/Pixel Art/Bow & Arrow.gif" alt="">
-                    <img src="/Pixel Art/Blackhole.png" alt="">
-                    <img src="/Pixel Art/City at Night.png" alt="">
-                    <img src="/Pixel Art/Fountain Pen.png" alt="">
-                </section>
-            </div>
-        </section>
-
-        <section class="topic social">
-            <h1>Socials</h1>
-            <div class="horizontal-center">
-                <section class="socials-showcase">
-                    <button onclick="window.location.href='https:\//www.youtube.com/@Trixe-space'">
-                        <img src="/Icons/Youtube.png" alt="">
-                        <span>Youtube</span>
-                    </button>
-                    <button onclick="window.location.href='https:\//github.com/Trixe-space'">
-                        <img src="/Icons/Github.svg" alt="">
-                        <span>Github</span>
-                    </button>
-                    <button onclick="window.location.href='https:\//trixe-space.itch.io'">
-                        <img src="/Icons/itchio.svg" alt="">
-                        <span>Itch.io</span>
-                    </button>
-                    <button onclick="window.location.href='https:\//www.pixilart.com/trixe-space'">
-                        <img src="/Icons/Pixilart.png" alt="">
-                        <span>Pixilart</span>
-                    </button>
-                </section>
-            </div>
-        </section>
-        <footer class="topic horizontal-center" style="background-color: hsl(210, 8%, 15%);">
-            <span>
-                Email: <a href="mailto:trixe-space@trixe-space.tk">trixe-space@trixe-space.tk</a>
-            </span>
-        </footer>
-    </main>
-
-
-    <script src="/dist/code.js"></script>
+    </section>
+    <section id="socials">
+        <header>
+            <div class="line"></div>
+            <span class="heading-text">Socials & Contact</span>
+        </header>
+        <div id="social-list">
+            <button class="social-list-element" onclick="window.open('https://www.pixilart.com/trixe-space')">
+                <img src="images/pixilart.png" alt="Pixilart link">
+                <div class="line"></div>
+                <span>Pixilart</span>
+            </button>
+            <button class="social-list-element" onclick="window.open('https://github.com/Trixe-space')">
+                <img src="images/github.svg" alt="GitHub link">
+                <div class="line"></div>
+                <span>GitHub</span>
+            </button>
+            <button class="social-list-element" onclick="window.open('mailto:trixe-space@trixe-space.tk')">
+                <img src="images/email-icon.svg" alt="Image link">
+                <div class="line"></div>
+                <span>Email</span>
+            </button>
+        </div>
+    </section>
 </body>
-
 </html>

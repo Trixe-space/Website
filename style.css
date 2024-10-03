@@ -1,180 +1,198 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Pixelify+Sans:wght@400..700&display=swap');
 
 :root {
-    --blue: #6CE5E8;
-    --dark-blue: #00c9cc;
-    --red: #FF5649;
-    --gray: #494F56;
-    --background: #2c3034;
+    --background: #121212;
+    --background-lighter: #202020;
+    --background-secondary: #1A1A1A;
+    --background-secondary-lighter: #252525;
+    --blue: #007FFF;
+    --red: #EA594C;
+    --purple: #8F10FF;
 }
 
 * {
     color-scheme: dark;
-    font-family: "Roboto Condensed", sans-serif;
-}
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--red);
-    border-radius: 20px;
+    font-family: 'ADLaM Display', Arial;
 }
 
 body {
-    background-color: var(--background);
-    margin: 0;
+    background-image: linear-gradient(var(--background), var(--background-lighter));
+    background-repeat: no-repeat;
+    padding-inline: 8em;
 }
 
-a {
-    text-decoration: none;
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10em;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-h1, p {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.opaque {
-    opacity: 1 !important;
+.heading-text {
+    font-size: 96px;
 }
 
 header {
-    background-image: url(/Images/HeaderBanner.svg);
-    background-size: cover;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 1em;
-    padding-inline: 10em;
-    height: 100vh;
-    height: 100svh;
-    overflow: hidden;
 }
 
-.header-text {
-    display: flex;
-    flex-direction: column;
-    font-size: 5em;
+.line {
+    border-left: 2px white solid;
+    margin-right: 2em;
 }
 
-.header-text>span {
-    color: var(--background);
-    font-family: "Fugaz One", sans-serif;
+.gradient-button {
+    appearance: none;
+    border: none;
+    padding: 1px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in-out;
 }
 
-.header-text>span:nth-child(1) {
-    color: var(--red);
-    margin-bottom: 1.5em;
+.gradient-button-pixilart {
+    background-image: linear-gradient(to bottom right, #FF315A, white);
+    /* background-color: #FF315A; */
+    box-shadow: #FF315A 0 0;
 }
 
-.horizontal-center {
+.gradient-button-pixilart:hover {
+    cursor: pointer;
+    box-shadow: #FF315A 0 0 20px;
+}
+
+.gradient-button-github {
+    background-image: linear-gradient(to bottom right, #171515, white);
+    box-shadow: #433d3d 0 0;
+}
+
+.gradient-button-github:hover {
+    cursor: pointer;
+    box-shadow: #433d3d 0 0 20px;
+}
+
+.button-content-container {
     display: flex;
     justify-content: center;
-    padding: 2em;
-}
-
-.general-info {
-    display: inline-flex;
-    flex-direction: column;
     align-items: center;
-    background-color: var(--gray);
-    border-radius: 20px;
-    padding: 2em;
-}
-
-.topic {
+    gap: 1em;
     padding-block: 1em;
     padding-inline: 2em;
+    background-color: var(--background-secondary);
+    border-radius: 20px;
 }
 
-.topic:nth-child(even) {
-    background-color: var(--gray);
+.button-content-container > img {
+    height: 3em;
 }
 
-#itch-embed {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.hobbies {
+    gap: 2em;
+    text-align: center;
 }
 
-.pixel-art-showcase {
-    display: grid;
-    grid-template-columns: 256px 256px 256px;
-    grid-template-rows: 1fr 1fr;
+#project-list {
+    display: flex;
+    gap: 2em;
 }
 
-.pixel-art-showcase img {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    height: 256px;
-    image-rendering: pixelated;
+.project-card {
+    max-width: 50ch;
+    padding: 1.5em;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom right, var(--background-secondary), var(--background-secondary-lighter));
+    box-shadow: black 0 0 15px;
 }
 
-.pixel-art-showcase>img:nth-child(1) {
-    grid-column: span 2;
+.project-link-container {
+    display: flex;
+    gap: 1em;
+    align-items: center;
 }
 
-.socials-showcase {
-    display: inline-grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 5em;
-    row-gap: 2em;
+.project-link {
+    appearance: none;
+    padding: 0.5em;
+    background-color: var(--background);
+    border: none;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    box-shadow: white 0 0 5px;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.2s ease-out;
 }
 
-.socials-showcase>button {
+.project-link:hover {
+    cursor: pointer;
+    background-color: var(--background-secondary-lighter);
+    box-shadow: white 0 0 10px;
+}
+
+.project-link img {
+    width: 3em;
+}
+
+.social-list-element {
     appearance: none;
     border: none;
     background: none;
     display: flex;
-    align-items: center;
     gap: 1em;
+    align-items: center;
+    padding: 1em;
+    border-radius: 20px;
+    transition: background 0.2s ease-in-out;
 }
 
-.socials-showcase>button:hover {
+.social-list-element:hover {
     cursor: pointer;
-    text-decoration: underline;
+    background-color: var(--background-secondary-lighter);
 }
 
-.socials-showcase>button>img {
+.social-list-element img {
     width: 5em;
 }
 
-.socials-showcase>button>span {
-    font-size: 2em;
+.social-list-element .line {
+    height: 3em;
 }
 
-@media screen and (orientation:portrait) {
-    body {
-        font-size: 8px;
-    }
+#name {
+    color: var(--blue);
+}
 
-    header {
-        justify-content: center;
-    }
-    
-    header>img {
-        display: none;
-        position: absolute;
-    }
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    flex-direction: row;
+}
 
-    #itch-embed {
-        display: none;
-    }
+#about-me-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
 
-    .pixel-art-showcase {
-        display: none;
-    }
+#pixel-artist {
+    font-family: 'Pixelify Sans';
+    color: var(--red);
+}
 
-    .socials-showcase>button>span {
-        font-size: 1em;
-    }
+#developer {
+    color: var(--purple);
+}
 
-    .socials-showcase>button>img {
-        width: 2.5em;
-    }
+#projects {
+    gap: 2em;
+}
+
+#socials {
+    gap: 2em;
+}
+
+#social-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
 }
