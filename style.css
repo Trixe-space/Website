@@ -30,7 +30,7 @@ section {
 }
 
 .heading-text {
-    font-size: 96px;
+    font-size: 6em;
 }
 
 header {
@@ -92,7 +92,8 @@ header {
 }
 
 #project-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2em;
 }
 
@@ -195,4 +196,56 @@ header {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
+}
+
+@media (width <= 952px) {
+    #heading {
+        align-items: baseline;
+    }
+
+    #name {
+        display: block;
+    }
+}
+
+@media (width <= 750px) {
+    body {
+        padding-inline: 4em;
+    }
+}
+
+@media (width <= 580px) {
+    #project-list {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (width <= 510px) {
+    body {
+        padding-inline: 2em;
+    }
+
+    .heading-text {
+        font-size: 4em;
+    }
+}
+
+@media (width <= 370px) {
+    body {
+        padding-inline: 0;
+    }
+
+    .heading-text {
+        font-size: 3em;
+    }
+}
+
+@media (orientation: portrait) {
+    .hobbies {
+        text-align: left;
+    }
+
+    p {
+        line-height: 2em;
+    }
 }
